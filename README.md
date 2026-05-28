@@ -21,6 +21,7 @@ TODO/Additional Considerations
 
 ## Jegadeesh-Titman (1993) Cross-Sectional Momentum
 
+![MACD Strategy](images/momentum_returns.png)
 **Strategy:** Cross-sectional momentum across the full S&P 500 universe. 
 Ranks all stocks by 12-month trailing return, goes long top 50 and 
 short bottom 50, rebalanced monthly with overlapping portfolios — 
