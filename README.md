@@ -16,3 +16,23 @@ TODO/Additional Considerations
 2. Trading costs are not incorporated
 3. I assume we can easily short stocks without problem, and that the eventual buy pair cancels out the short leg.
 4. How does this strategy perform during times of intense volatility?
+
+
+
+## Jegadeesh-Titman (1993) Cross-Sectional Momentum
+
+**Strategy:** Cross-sectional momentum across the full S&P 500 universe. 
+Ranks all stocks by 12-month trailing return, goes long top 50 and 
+short bottom 50, rebalanced monthly with overlapping portfolios — 
+a direct implementation of the Jegadeesh & Titman (1993) paper.
+
+**Key Metrics (2010–2025):**
+- Annualized Return: 7.59%
+- Annualized Volatility: 23.56%
+- Annualized Sharpe: 0.32
+- S&P 500 Sharpe (same period): ~0.90
+
+**Findings:** Strategy produces positive but modest returns, 
+underperforming the S&P 500 on a risk-adjusted basis. Consistent 
+with academic literature on momentum decay in crowded strategies 
+post-2010.
