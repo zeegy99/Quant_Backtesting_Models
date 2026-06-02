@@ -1,19 +1,24 @@
 # Quant_Backtesting_Models
 
 
-[Pairs Trading Notebook](Pairwise_testing.ipynb)
+## Stat Arb (Pairs Trading)
 
+[Pairs Trading Notebook](Pairwise_testing.ipynb)
+ ![MACD Strategy](images/pairwise_testing.png)
 **Overarching Strategy:** 
 1. Find stationary (mean reverting) spread between two stocks
 2. Trade when the spread gets statistically large (2 std)
+3. Backtest!
+
+**Results**: On KO and PEP, they failed to satisfy ADFuller, meaning the distribution was non-stationary. When trying to pairs trade on non-stationary spreads, results are negative.
 
 
 
 
+## MACD Strategy
 
-
-MACD: ![MACD Strategy](images/MACD_strategy.png)
 [MACD Trading Notebook](MACD.ipynb)
+ ![MACD Strategy](images/MACD_strategy.png)
 **Overarching Strategy:** The Moving Average Convergence Divergence (MACD) is a technical analysis tool that uses momentum to find opportunities to buy/sell. Academic Papers like Jegadesh & Titman (See Momentum Model Below) have proved that momentum still works and I wanted to extend this to see if MACD also produces returns. We are looking at the exponential moving average and whenever it flips from positive to negative we sell, and when it flips from negative sentiment to positive sentiment we buy.
 
 **Findings:** This strategy does not seem reliable. Over certain periods it outperforms, other times underperforms. Over arbitrary timeframes within the past 20 years and looking at companies within the S&P500, it on average underperforms buy & hold strategies. We believe that this is because it spends the majority of time not within a position, causing underperformance to buy & hold.It also underperforms in non-US markets (Europe, China, Japan) were tested.
