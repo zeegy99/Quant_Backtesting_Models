@@ -1,7 +1,19 @@
 # Quant_Backtesting_Models
 
-MACD: ![MACD Strategy](images/MACD_strategy.png)
 
+[Pairs Trading Notebook](Pairwise_testing.ipynb)
+
+**Overarching Strategy:** 
+1. Find stationary (mean reverting) spread between two stocks
+2. Trade when the spread gets statistically large (2 std)
+
+
+
+
+
+
+MACD: ![MACD Strategy](images/MACD_strategy.png)
+[MACD Trading Notebook](MACD.ipynb)
 **Overarching Strategy:** The Moving Average Convergence Divergence (MACD) is a technical analysis tool that uses momentum to find opportunities to buy/sell. Academic Papers like Jegadesh & Titman (See Momentum Model Below) have proved that momentum still works and I wanted to extend this to see if MACD also produces returns. We are looking at the exponential moving average and whenever it flips from positive to negative we sell, and when it flips from negative sentiment to positive sentiment we buy.
 
 **Findings:** This strategy does not seem reliable. Over certain periods it outperforms, other times underperforms. Over arbitrary timeframes within the past 20 years and looking at companies within the S&P500, it on average underperforms buy & hold strategies. We believe that this is because it spends the majority of time not within a position, causing underperformance to buy & hold.It also underperforms in non-US markets (Europe, China, Japan) were tested.
@@ -21,6 +33,7 @@ TODO/Additional Considerations
 
 ## Jegadeesh-Titman (1993) Cross-Sectional Momentum
 
+[JT Momentum Trading Notebook](JT_Momentum_Implementation.ipynb)
 ![MACD Strategy](images/momentum_returns.png)
 **Strategy:** Cross-sectional momentum across the full S&P 500 universe. 
 Ranks all stocks by 12-month trailing return, goes long top 50 and 
